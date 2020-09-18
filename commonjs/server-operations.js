@@ -5,11 +5,15 @@
 
     const operations = require('./operations');//importando o módulo criado
 
+    // exportando um módulo que possui uma função 
+    const functions = require('./functions');
+
     const servidor = http.createServer((request,response)=>{
     // controlando a url de acesso
         if(request.url === '/operations'){
         response.writeHead(200, { "Content-Type": "application/json"});
-        // retornando os valores do módulo operations na resposta   
+        // retornando os valores do módulo operations na resposta  
+        operations["maioridade"] = functions(operations.idade);
         response.end(JSON.stringify(operations));            
         }
         

@@ -2,5 +2,6 @@
 
 module.exports = {
         nome: "Tadeu",
-        sobrnome: "Nascimento"
+        sobrnome: "Nascimento",
+        idade: 37
 };
