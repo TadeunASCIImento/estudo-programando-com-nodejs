@@ -4,9 +4,12 @@
     const http = require('http');//módulo http
 
     const servidor = http.createServer((request,response)=>{
+    // controlando a url de acesso
+        if(request.url === '/mensagem'){
         response.writeHead(200, { "Content-Type": "text/html" });
         response.write("<h1>Servidor acessado!</h1>");
         response.end();            
+        }
         
     // informações referntes a requisição    
         const headers = request.headers;
