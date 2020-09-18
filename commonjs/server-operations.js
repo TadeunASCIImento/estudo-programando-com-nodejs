@@ -5,7 +5,7 @@
 
     const operations = require('./operations');//importando o módulo criado
 
-    // exportando um módulo que possui uma função 
+    // importando um módulo que possui uma função 
     const functions = require('./functions');
 
     const servidor = http.createServer((request,response)=>{
